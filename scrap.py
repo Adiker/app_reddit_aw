@@ -59,44 +59,33 @@ def save_to_db(posts):
     conn.commit()
     conn.close()
 
-def fetch_reddit_posts(subreddit, limit):
-    # Define your credentials
+def fetch_reddit_posts(subreddit, limit, post_type='hot'):
     user_agent = "praw_scraper_1.0"
     reddit = praw.Reddit(
         client_id='RQqxWxSFnMxig3sDALEQUg',
         client_secret='_2tiLRR5kJ6j9k_uZ5Dgu_1rcKDCyg',
         user_agent=user_agent
     )
-
-    # Fetch the specified number of popular posts from r/popular
-    popular_posts = reddit.subreddit(subreddit).hot(limit=limit)
-
-    # Create a list to store post details
+    if post_type == 'hot':
+        posts_generator = reddit.subreddit(subreddit).hot(limit=limit)
+    elif post_type == 'new':
+        posts_generator = reddit.subreddit(subreddit).new(limit=limit)
+    elif post_type == 'top':
+        posts_generator = reddit.subreddit(subreddit).top(limit=limit)
+    elif post_type == 'controversial':
+        posts_generator = reddit.subreddit(subreddit).controversial(limit=limit)
+    else:
+        raise ValueError("Nieprawidłowy wybór postów. Musi być: 'hot', 'new', 'top', 'controversial'.")
     posts = []
-
-    # Initialize VADER sentiment analyzer
     sia = SentimentIntensityAnalyzer()
-
-    # Initialize a dictionary to keep track of author statistics
     author_stats = {}
-
-    # Loop through the posts and add details to the list
-    for post in popular_posts:
-        # Calculate sentiment for the post title
+    for post in posts_generator:
         post_sentiment = sia.polarity_scores(post.title)['compound']
-
-        # Fetch the top 5 comments
         post.comments.replace_more(limit=0)
         top_comments = post.comments.list()[:5]
-
-        # Calculate sentiment for the top comments
         comment_sentiments = [sia.polarity_scores(comment.body)['compound'] for comment in top_comments]
         avg_comment_sentiment = sum(comment_sentiments) / len(comment_sentiments) if comment_sentiments else 0
-
-        # Average the sentiment scores
         overall_sentiment = (post_sentiment + avg_comment_sentiment) / 2
-
-        # Extract additional features
         title_length = len(post.title)
         hour_of_day = datetime.utcfromtimestamp(post.created_utc).hour
         day_of_week = datetime.utcfromtimestamp(post.created_utc).weekday()
@@ -105,11 +94,9 @@ def fetch_reddit_posts(subreddit, limit):
         comment_count = len(post.comments.list())
         upvote_ratio = post.upvote_ratio
         sentiment_title_interaction = post_sentiment * title_length
-
-        # Author statistics
         author = str(post.author)
         if author not in author_stats:
-            author_posts = reddit.redditor(author).submissions.new(limit=100)  # Fetching up to 100 posts for statistics
+            author_posts = reddit.redditor(author).submissions.new(limit=100)
             author_df = pd.DataFrame([{
                 'score': p.score
             } for p in author_posts])
@@ -144,12 +131,11 @@ def fetch_reddit_posts(subreddit, limit):
         })
 
     save_to_db(posts)
-    # Create a pandas DataFrame
+
     df = pd.DataFrame(posts)
     return df
 
 def fetch_user_posts(username):
-    # Define your credentials
     user_agent = "praw_scraper_1.0"
     reddit = praw.Reddit(
         client_id='RQqxWxSFnMxig3sDALEQUg',
@@ -157,36 +143,27 @@ def fetch_user_posts(username):
         user_agent=user_agent
     )
 
-    # Fetch the 10 latest posts from the user
     user = reddit.redditor(username)
     user_posts = user.submissions.new(limit=10)
 
-    # Create a list to store post details
     posts = []
 
-    # Initialize VADER sentiment analyzer
     sia = SentimentIntensityAnalyzer()
 
-    # Initialize a dictionary to keep track of author statistics
     author_stats = {}
 
-    # Loop through the posts and add details to the list
     for post in user_posts:
-        # Calculate sentiment for the post title
+
         post_sentiment = sia.polarity_scores(post.title)['compound']
 
-        # Fetch the top 5 comments
         post.comments.replace_more(limit=0)
         top_comments = post.comments.list()[:5]
 
-        # Calculate sentiment for the top comments
         comment_sentiments = [sia.polarity_scores(comment.body)['compound'] for comment in top_comments]
         avg_comment_sentiment = sum(comment_sentiments) / len(comment_sentiments) if comment_sentiments else 0
 
-        # Average the sentiment scores
         overall_sentiment = (post_sentiment + avg_comment_sentiment) / 2
 
-        # Extract additional features
         title_length = len(post.title)
         hour_of_day = datetime.utcfromtimestamp(post.created_utc).hour
         day_of_week = datetime.utcfromtimestamp(post.created_utc).weekday()
@@ -196,10 +173,9 @@ def fetch_user_posts(username):
         upvote_ratio = post.upvote_ratio
         sentiment_title_interaction = post_sentiment * title_length
 
-        # Author statistics
         author = str(post.author)
         if author not in author_stats:
-            author_posts = reddit.redditor(author).submissions.new(limit=100)  # Fetching up to 100 posts for statistics
+            author_posts = reddit.redditor(author).submissions.new(limit=100)
             author_df = pd.DataFrame([{
                 'score': p.score
             } for p in author_posts])
@@ -234,6 +210,5 @@ def fetch_user_posts(username):
         })
 
     save_to_db(posts)
-    # Create a pandas DataFrame
     df = pd.DataFrame(posts)
     return df

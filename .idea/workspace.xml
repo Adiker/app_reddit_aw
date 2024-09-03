@@ -7,14 +7,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8a904a15-4878-464d-8466-e552fdbedbb7" name="Changes" comment="Create prac_inz_beta">
-      <change afterPath="$PROJECT_DIR$/model.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modeltest.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reddit_data.db" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reddit_data_backup.db" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reddit_trend_model.pkl" afterDir="false" />
+    <list default="true" id="8a904a15-4878-464d-8466-e552fdbedbb7" name="Changes" comment="Update prac_inz_beta">
+      <change afterPath="$PROJECT_DIR$/img/reddit-logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/reddit-logo.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/updatescript.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/prac_inz_beta.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/app_reddit_aw.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model.py" beforeDir="false" afterPath="$PROJECT_DIR$/model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modeltest.py" beforeDir="false" afterPath="$PROJECT_DIR$/modeltest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reddit_data.db" beforeDir="false" afterPath="$PROJECT_DIR$/reddit_data.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reddit_data_backup.db" beforeDir="false" afterPath="$PROJECT_DIR$/reddit_data_old.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reddit_trend_model.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/reddit_trend_model.pkl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scrap.py" beforeDir="false" afterPath="$PROJECT_DIR$/scrap.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -58,23 +63,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "Python.analyze_model.executor": "Run",
-    "Python.gui.executor": "Run",
-    "Python.main.executor": "Run",
-    "Python.model.executor": "Run",
-    "Python.modeltest.executor": "Run",
-    "Python.reszty.executor": "Run",
-    "Python.scrap.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
-    "run.code.analysis.last.selected.profile": "aDefault",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Python.analyze_model.executor&quot;: &quot;Run&quot;,
+    &quot;Python.gui.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.maingrid.executor&quot;: &quot;Run&quot;,
+    &quot;Python.model.executor&quot;: &quot;Run&quot;,
+    &quot;Python.modeltest.executor&quot;: &quot;Run&quot;,
+    &quot;Python.reszty.executor&quot;: &quot;Run&quot;,
+    &quot;Python.scrap.executor&quot;: &quot;Run&quot;,
+    &quot;Python.updatescript.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;aDefault&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.project&quot;
   }
-}]]></component>
+}</component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -99,12 +106,21 @@
       <option name="project" value="LOCAL" />
       <updated>1716550284039</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Update prac_inz_beta">
+      <option name="closed" value="true" />
+      <created>1724837040263</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1724837040263</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Create prac_inz_beta" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create prac_inz_beta" />
+    <MESSAGE value="Update prac_inz_beta" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update prac_inz_beta" />
   </component>
 </project>
