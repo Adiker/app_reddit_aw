@@ -8,19 +8,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8a904a15-4878-464d-8466-e552fdbedbb7" name="Changes" comment="Update prac_inz_beta">
-      <change afterPath="$PROJECT_DIR$/img/reddit-logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/reddit-logo.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/updatescript.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/prac_inz_beta.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/app_reddit_aw.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model.py" beforeDir="false" afterPath="$PROJECT_DIR$/model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modeltest.py" beforeDir="false" afterPath="$PROJECT_DIR$/modeltest.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/reddit_data.db" beforeDir="false" afterPath="$PROJECT_DIR$/reddit_data.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reddit_data_backup.db" beforeDir="false" afterPath="$PROJECT_DIR$/reddit_data_old.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reddit_trend_model.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/reddit_trend_model.pkl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrap.py" beforeDir="false" afterPath="$PROJECT_DIR$/scrap.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,6 +68,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Adiker/PycharmProjects/app_reddit_aw&quot;,
     &quot;run.code.analysis.last.selected.profile&quot;: &quot;aDefault&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.project&quot;
   }
