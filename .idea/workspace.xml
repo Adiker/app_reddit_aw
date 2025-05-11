@@ -7,13 +7,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8a904a15-4878-464d-8466-e552fdbedbb7" name="Changes" comment="Update prac_inz_beta">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model.py" beforeDir="false" afterPath="$PROJECT_DIR$/model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modeltest.py" beforeDir="false" afterPath="$PROJECT_DIR$/modeltest.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reddit_data.db" beforeDir="false" afterPath="$PROJECT_DIR$/reddit_data.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reddit_trend_model.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/reddit_trend_model.pkl" afterDir="false" />
-    </list>
+    <list default="true" id="8a904a15-4878-464d-8466-e552fdbedbb7" name="Changes" comment="Update app_reddit_aw" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -72,7 +66,7 @@
     "ignore.virus.scanning.warn.message": "true",
     "last_opened_file_path": "C:/Users/Adiker/Desktop/Program Mandaty",
     "run.code.analysis.last.selected.profile": "aDefault",
-    "settings.editor.selected.configurable": "configurable.group.project"
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
   <component name="SharedIndexes">
@@ -123,7 +117,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732468843918</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Update prac_inz_beta">
+      <option name="closed" value="true" />
+      <created>1746986937946</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1746986937946</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
