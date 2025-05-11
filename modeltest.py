@@ -19,7 +19,7 @@ model = load_model()
 predictions = model.predict(X_test)
 
 mse = mean_squared_error(y_test, predictions)
-print(f"Mean Squared Error na zbiorze testowym: {mse}")
+print(f"Mean Squared Error (najlepszy model): {mse}")
 
 min_y = min(y_test.min(), predictions.min())
 max_y = max(y_test.max(), predictions.max())
@@ -54,8 +54,7 @@ for name, model in models.items():
         'predictions': predictions,
         'mse': mse
     }
-    print(f"{name} Mean Squared Error: {mse}")
-
+    #print(f"{name} Mean Squared Error: {mse}")
 
 for i, (name, result) in enumerate(model_results.items(), 2):
     plt.subplot(2, 3, i)

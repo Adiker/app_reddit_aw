@@ -178,7 +178,7 @@ if __name__ == "__main__":
     print(f"{best_model_name} z zapisanym MSE: {best_mse}")
 
     scores = cross_val_score(best_model, X_train, y_train, cv=5, scoring='neg_mean_squared_error')
-    print(f"Cross-Validation Scores: {-scores.mean()}")
+    #print(f"Cross-Validation Scores: {-scores.mean()}")
 
 
 
